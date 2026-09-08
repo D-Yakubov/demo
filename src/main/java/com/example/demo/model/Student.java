@@ -37,6 +37,7 @@ public class Student {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "faculty_id")
+    @com.fasterxml.jackson.annotation.JsonIgnoreProperties("students")
     private Faculty faculty;
 
 }
